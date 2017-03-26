@@ -39,6 +39,7 @@
 #include "htc-asia.h"
 #include "htc-ee_uk.h"
 #include "htc-europe.h"
+#include "htc-kddi.h"
 #include "htc-mexico.h"
 #include "htc-o2_uk.h"
 #include "htc-sprint.h"
@@ -107,6 +108,8 @@ void vendor_load_properties()
         load_properties(htc_ee_uk_properties);
     } else if (is_variant_europe(bootcid)) {
         load_properties(htc_europe_properties);
+    } else if (is_variant_kddi(bootcid)) {
+        load_properties(htc_kddi_properties);
     } else if (is_variant_mexico(bootcid)) {
         load_properties(htc_mexico_properties);
     } else if (is_variant_o2_uk(bootcid)) {
